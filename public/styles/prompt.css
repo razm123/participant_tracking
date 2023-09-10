@@ -1,0 +1,90 @@
+:root {
+    --font: 1.5rem;
+}
+html,
+body {
+    margin: 0;
+    min-height: 100vh;
+    height: 100%;
+    background-color: #e5e7eb;
+}
+* {
+    font-family: "Roboto", sans-serif, Arial, Helvetica;
+}
+input[type="password"],
+input[type="text"] {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid black;
+    width: 50vw;
+    min-height: 25px;
+    height: 4vh;
+}
+
+input[type="password"]:hover {
+    border: 2px solid blue;
+}
+
+form {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.passwordDiv,
+.userDiv {
+    font-size: var(--font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* flex-grow: 1; */
+}
+#confirmBtn {
+    margin-top: 10px;
+    height: 50px;
+    width: 300px;
+    font-size: 1rem;
+    font-size: var(--font);
+    background-color: #0154ae;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+#confirmBtn:hover {
+    background-color: black;
+}
+
+@media (min-width: 640px) {
+    #confirmBtn,
+    .passwordDiv {
+        max-width: 36rem;
+        font-size: 1.5em;
+        line-height: 1.75rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #confirmBtn,
+    .passwordDiv {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    #confirmBtn,
+    .passwordDiv {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+
+    #confirmBtn,
+    .passwordDiv {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}

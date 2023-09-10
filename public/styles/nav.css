@@ -1,0 +1,229 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --bg-color: #222327;
+    --text-color: #fff;
+    --main-color: linear-gradient(180deg, #020093, #1a8aed);
+    --hover-color: #1aed95;
+    --hover-color2: #29fd53;
+}
+
+/* body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+} */
+
+header {
+    background-color: white;
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 14px 2%; */
+    transition: all 0.5s ease;
+}
+
+/* .logo {
+    display: flex;
+    align-items: center;
+} */
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 500;
+    /* padding: 5px 0; */
+    margin: 0px 20px;
+    transition: all 0.5s ease;
+}
+
+.navbar a:hover,
+.navbar a.active:hover {
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.navbar a.active {
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.mainNav {
+    display: flex;
+    align-items: center;
+}
+
+#menu-icon {
+    font-size: 45px;
+    color: black;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+/* @media (max-width: 1280px) {
+    header {
+        padding: 14px 2%;
+        transition: 0.2s;
+    }
+
+    .navbgar a {
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+} */
+@media (max-width: 900px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 220px;
+        height: auto;
+        background: var(--main-color);
+        /* display: flex; */
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+        /* color: white; */
+    }
+
+    .navbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 0 25px;
+        transition: all 0.5s ease;
+        color: white;
+        font-size: 1.4rem;
+    }
+
+    .navbar a:hover,
+    .navbar a.active:hover {
+        color: var(--hover-color);
+        transform: translateY(5px);
+        padding: 0px 25px;
+        border-radius: 0px;
+    }
+
+    .navbar a.active {
+        color: var(--text-color);
+        padding: 0 25px;
+    }
+
+    .navbar.open {
+        display: flex;
+        right: 2%;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        width: 200px;
+    }
+}
+.brand-title img {
+    width: 60%;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+@media (min-width: 640px) {
+    .brand-title {
+        /* width: 60%; */
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .brand-title {
+        /* width: 65%; */
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .brand-title {
+        /* width: 70%; */
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        font-size: 1.25rem;
+        width: 300px;
+    }
+}
+
+/* @supports (-webkit-touch-callout: none) {
+    .navbar {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 200px;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+        color: black;
+        background-color: var(--main-color);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .navbar a {
+        margin: 0px 10px; 
+    }
+} */
+
+@media only screen and (max-width: 900px) and (-webkit-touch-callout: none) {
+    .navbar a:hover,
+    .navbar a.active {
+        color: black;
+        background-color: var(--main-color);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .navbar {
+        /* Add specific styles for the navbar container in iOS devices */
+        /* For example, adjust the width or height */
+        margin-top: 20px; /* Add margin to create space between the navbar and other elements */
+        margin-bottom: 20px;
+        width: 250px;
+        height: auto;
+    }
+
+    .navbar a {
+        margin: 0px 10px;
+    }
+}

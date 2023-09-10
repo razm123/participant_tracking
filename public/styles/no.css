@@ -1,0 +1,39 @@
+html,
+body {
+    margin: 0;
+    background-color: #e5e7eb;
+}
+p {
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif, Arial, Helvetica;
+    font-weight: 900;
+    text-align: center;
+}
+
+@media (min-width: 640px) {
+    p {
+        max-width: 36rem;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}
+
+@media (min-width: 768px) {
+    p {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    p {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+
+    p {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}

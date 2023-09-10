@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet" />
+        <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+
+        <title>Site 1</title>
+
+        <script src="../src/nav.js" defer></script>
+        <script src="../src/site1.js" defer></script>
+
+        <link rel="stylesheet" href="../styles/site.css" />
+        <link rel="stylesheet" href="../styles/nav.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="brand-title">
+                    <a href="/" style="color: inherit; text-decoration: none" class="logo">
+                        <h2>Home</h2>
+                    </a>
+                </div>
+
+                <ul class="navbar">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/site1" ontouchstart="" class="active">Site 1</a></li>
+                    <li><a href="/site2">Site 2</a></li>
+                    <li><a href="/site3">Site 3</a></li>
+                </ul>
+
+                <div class="mainNav">
+                    <div class="bx bx-menu" id="menu-icon"></div>
+                </div>
+            </header>
+            <div class="main">
+                <!-- <ul></ul>
+                <input placeholder="message" />
+                <button>Send</button> -->
+                <h1 id="pageTitle">Site 1 Enrollment</h1>
+                <h2>Race/Ethnicity Availability:</h2>
+                <table id="race" class="layout display responsive-table">
+                    <thead>
+                        <tr>
+                            <th>Group</th>
+                            <th class="availability">Availability</th>
+                            <!-- <th>Group Availability</th> -->
+                        </tr>
+                    </thead>
+                    <tr id="whiteRow">
+                        <td class="group">Caucasian</td>
+                        <td id="white" class="number"></td>
+                    </tr>
+                    <tr id="blackRow">
+                        <td class="group">African American</td>
+                        <td id="black" class="number"></td>
+                    </tr>
+                    <tr id="otherRow">
+                        <td class="group">Others</td>
+                        <td id="other" class="number"></td>
+                    </tr>
+                </table>
+                <!-- <p id="white"></p>
+                <p id="black"></p>
+                <p id="other"></p> -->
+                <h2>Bilirubin Level Availability:</h2>
+                <table id="group" class="layout display responsive-table">
+                    <thead>
+                        <tr>
+                            <th>Group</th>
+                            <th class="availability">Availability</th>
+                            <!-- <th>Group Availability</th> -->
+                        </tr>
+                    </thead>
+                    <tr id="group1Row">
+                        <td class="group">2mg/dl &hyphen; 8mg/dl</td>
+                        <td id="group1" class="number"></td>
+                    </tr>
+                    <tr id="group2Row">
+                        <td class="group">9mg/dl &hyphen; 14mg/dl</td>
+                        <td id="group2"></td>
+                    </tr>
+                    <tr id="group3Row">
+                        <td class="group">15mg/dl &hyphen; 20mg/dl</td>
+                        <td id="group3"></td>
+                    </tr>
+                </table>
+                <!-- <p id="group1"></p>
+                <p id="group2"></p>
+                <p id="group3"></p> -->
+            </div>
+        </div>
+    </body>
+</html>
